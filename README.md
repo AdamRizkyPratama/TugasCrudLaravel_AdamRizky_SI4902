@@ -1,4 +1,4 @@
-# CRUD Sistem Tugas Akhir Mahasiswa dengan Laravel
+# CRUD Sistem Tugas Akhir Mahasiswa dengan Laravel Modul C
 
 ## Deskripsi
 Repo ini merupakan implementasi CRUD (Create, Read, Update, Delete) di Laravel yang sebelumnya masih menggunakan PHP Native.
