@@ -12,7 +12,7 @@
 
 <div class="container py-5">
 
-    {{-- Header --}}
+    
     <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div>
             <h2 class="fw-bold mb-1">Daftar Mahasiswa</h2>
@@ -24,7 +24,7 @@
         </a>
     </div>
 
-    {{-- Pesan berhasil --}}
+  
     @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show"
              role="alert">
@@ -37,7 +37,7 @@
         </div>
     @endif
 
-    {{-- Pesan error --}}
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="mb-0">
@@ -48,11 +48,10 @@
         </div>
     @endif
 
-    {{-- Tabel data mahasiswa --}}
+    
     <div class="card border-0 shadow-sm">
         <div class="card-body p-4">
 
-            {{-- Form pencarian --}}
             <form action="{{ route('mahasiswa.index') }}"
                   method="GET"
                   class="row g-2 mb-4">
@@ -79,7 +78,7 @@
                 </div>
             </form>
 
-            {{-- Tabel --}}
+       
             <div class="table-responsive">
                 <table class="table table-hover align-middle">
 
@@ -101,7 +100,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
 
-                                {{-- Foto mahasiswa --}}
+                        
                                 <td>
                                     @if ($mhs->gambar)
                                         <img
@@ -128,7 +127,7 @@
 
                                 <td>{{ $mhs->sks_lulus }}</td>
 
-                                {{-- Status keaktifan --}}
+                             
                                 <td>
                                     @if ($mhs->status_keaktifan == 'Aktif')
                                         <span class="badge bg-success">
@@ -141,7 +140,6 @@
                                     @endif
                                 </td>
 
-                                {{-- Tombol aksi --}}
                                 <td>
                                     <div class="d-flex justify-content-center gap-2">
 
@@ -192,7 +190,7 @@
                 </table>
             </div>
 
-            {{-- Total data --}}
+           
             <p class="text-secondary small mb-0">
                 Total data ditampilkan: {{ $mahasiswa->count() }} mahasiswa
             </p>
